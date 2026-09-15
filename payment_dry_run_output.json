@@ -1,0 +1,32 @@
+{
+  "planner": {
+    "selected": [
+      "x402check"
+    ],
+    "registry_cost_usd": 0.002,
+    "target": "https://x402.fuchss.app/v1/x402-trust"
+  },
+  "payment": {
+    "verifier_id": "x402check",
+    "mode": "DRY_RUN",
+    "status": "AUTHORIZED_NOT_PAID",
+    "quote": {
+      "verifier_id": "x402check",
+      "amount_atomic": 2000,
+      "amount_usd": "0.002",
+      "network": "eip155:8453",
+      "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "scheme": "exact",
+      "pay_to": "0xceEc1c3F6CD66dC7c91fae0e232Eac0d346564e9"
+    },
+    "http_status": null,
+    "response_excerpt": null,
+    "error": null
+  },
+  "spent_local_ledger_usd": "0",
+  "live_guard": {
+    "ack_env": "X402_LIVE_PAYMENT_ACK",
+    "required_value": "I_UNDERSTAND_THIS_SPENDS_USDC",
+    "private_key_env": "PAYER_PRIVATE_KEY"
+  }
+}

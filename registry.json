@@ -1,0 +1,52 @@
+[
+  {
+    "id": "x402check",
+    "operator": "x402check",
+    "claims": [
+      "protocol_conformance",
+      "current_reachability"
+    ],
+    "source_classes": [
+      "live_target_probe"
+    ],
+    "price_usd": 0.002,
+    "method": "GET",
+    "endpoint": "https://x402check.arden-instance.workers.dev/check",
+    "target_transport": "query:url",
+    "notes": "Live x402 conformance pre-flight check."
+  },
+  {
+    "id": "x402_trust_prober",
+    "operator": "x402 Trust Prober",
+    "claims": [
+      "historical_reliability",
+      "settlement_history",
+      "price_stability"
+    ],
+    "source_classes": [
+      "continuous_monitoring",
+      "onchain_settlements"
+    ],
+    "price_usd": 0.005,
+    "method": "POST",
+    "endpoint": "https://x402.fuchss.app/v1/x402-trust",
+    "target_transport": "json:resource",
+    "notes": "Deterministic trust/reliability data and on-chain settlement history."
+  },
+  {
+    "id": "10x402_single_check",
+    "operator": "10x402",
+    "claims": [
+      "protocol_conformance"
+    ],
+    "source_classes": [
+      "live_target_probe",
+      "spec_lint"
+    ],
+    "price_usd": 0.004,
+    "method": "POST",
+    "endpoint": "https://10x402.com/lint/envelope/one",
+    "target_transport": "json:url",
+    "notes": "Single x402 conformance check; included as a competing protocol verifier."
+  }
+]
